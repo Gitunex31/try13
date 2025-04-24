@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RechargeStatus.com</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#">Accueil</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div>
+        <div class="custom-language-selector">
+            <div class="selected-lang" onclick="toggleLangMenu()">
+              <img src="https://flagcdn.com/w20/fr.png" alt="FR">
+              <span>Français</span>
+            </div>
+            <ul class="lang-options">
+              <li onclick="setLang('fr')">
+                <img src="https://flagcdn.com/w20/fr.png" alt="FR"> Français
+              </li>
+              <li onclick="setLang('en')">
+                <img src="https://flagcdn.com/w20/gb.png" alt="EN"> English
+              </li>
+              <li onclick="setLang('es')">
+                <img src="https://flagcdn.com/w20/es.png" alt="ES"> Español
+              </li>
+              <li onclick="setLang('de')">
+                <img src="https://flagcdn.com/w20/de.png" alt="DE"> Deutsch
+              </li>
+              <li onclick="setLang('it')">
+                <img src="https://flagcdn.com/w20/it.png" alt="IT"> Italiano
+              </li>
+              <li onclick="setLang('pt')">
+                <img src="https://flagcdn.com/w20/pt.png" alt="PT"> Português
+              </li>
+            </ul>
+            
+        </div>
+    </div>
+  </header>
+
+  <body>
+    <div class="page-wrapper">
+      <section class="hero-section">
+        <div class="hero-content">
+          <h1 data-i18n="hero_title">Bienvenue sur RechargStatus.com</h1>
+          <p data-i18n="hero_text">Vérification rapide de vos billets pour savoir s'ils ont déjà été utilisés. Recevez un message de confirmation dans votre boîte aux lettres immédiatement après l'achat.</p>
+          <a href="#galerie" class="btn-primary" data-i18n="hero_link">Découvrir nos offres</a>
+        </div>
+      </section>   
+      
+      <!-- Ton contenu principal ici -->
+      <section id="galerie" class="gallery">
+        <div class="gallery-item">
+          <a href="form.html?image=Transcash"><img src="img/transcash.png" alt="Transcash"></a>
+        </div>
+        <div class="gallery-item">
+          <a href="form.html?image=Pcs"><img src="img/pcs.png" alt="PCS"></a>
+        </div>
+        <div class="gallery-item">
+          <a href="form.html?image=Neosurf"><img src="img/neosurf.jpg" alt="Neosurf"></a>
+        </div>
+        <div class="gallery-item">
+          <a href="form.html?image=Steam"><img src="img/steam.jpg" alt="Steam"></a>
+        </div>
+        <div class="gallery-item">
+          <a href="form.html?image=Google_play"><img src="img/google_play.jpg" alt="Google_play"></a>
+        </div>
+        <div class="gallery-item">
+          <a href="form.html?image=PaySafeCard"><img src="img/PaySafeCard.jpg" alt="PaySafeCard"></a>
+        </div>
+        <div class="gallery-item">
+          <a href="form.html?image=Amazon"><img src="img/Amazon.jpg" alt="Amazon"></a>
+        </div>
+        <div class="gallery-item">
+          <a href="form.html?image=Playstation_store"><img src="img/Playstation_store.jpg" alt="Playstation_store"></a>
+        </div>
+      </section>
+      
+      
+    
+      <section id="faq" class="faq">
+        <details>
+          <summary data-i18n="faq1">  Qu'est-ce que Transcash ?</summary>
+          <p data-i18n="faq1r">Une carte Transcash est une carte prépayée que vous pouvez utiliser dans n'importe quel
+            commerce ( en ligne ou physique) qui accepte les paiements via Mastercard. Un ticket Transcash est associé à 
+            un code et a une valeur de crédit que vous pouvez utiliser pour recharger votre carte prépayée Transcash.
+          </p>
+        </details>
+        <details>
+          <summary data-i18n="faq2">Est-ce sécurisé d'acheter un ticket Transcash en ligne ?</summary>
+          <p data-i18n="faq2r">Lorsque vous achetez un ticket Transcash sur RechargStatus.com, la transaction est sécurisée, 
+            rapide et sure.
+          </p>
+        </details>
+        <details>
+          <summary data-i18n="faq3">Où puis-je acheter une carte Transcash  ?</summary>
+          <p data-i18n="faq3r">Si vous résidez en France, vous pouvez acheter une carte Transcash en ligne ou en magasin
+            (revendeur Transcash ou tabac, par exemple).</p>
+        </details>
+        <details>
+          <summary data-i18n="faq4">Comment recevoir un email de confirmation ?</summary>
+          <p data-i18n="faq4r">En soumettant le formulaire ci-dessous avec une adresse valide.</p>
+        </details>
+      </section>
+    
+    </div>
+    <script src="script.js"></script>
+    <footer>
+      <!-- Ton footer ici -->
+      <div class="footer-container">
+        <div class="footer-links">
+            <a href="#galerie" data-i18n="footer_galerie">Galerie</a>
+            <a href="#faq" data-i18n="footer_faq">FAQ</a>
+            <a href="#contact" data-i18n="footer_contact">Contact</a>
+          </div>
+          <p data-i18n="footer_copyright">&copy; 2025 RechargStatus.com Tous droits réservés.</p>
+    </div>
+    </footer>
+
+</body>
+</html>
