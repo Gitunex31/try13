@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Merci pour votre soumission</title>
+  <title data-i18n="page_title">Merci pour votre soumission</title>
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -68,24 +68,40 @@
   <script>
     const translations = {
       fr: {
+        page_title: "Merci pour votre soumission",
         thank_you_title: "Merci pour votre soumission !",
         thank_you_message: "Nous avons bien reçu votre message et nous vous répondrons dans les plus brefs délais.",
         home_button: "Retour à l'accueil"
       },
       en: {
+        page_title: "Thank you for your submission",
         thank_you_title: "Thank you for your submission!",
         thank_you_message: "We have received your message and will respond shortly.",
         home_button: "Back to home"
       },
       es: {
+        page_title: "Gracias por tu envío",
         thank_you_title: "¡Gracias por tu envío!",
         thank_you_message: "Hemos recibido tu mensaje y te responderemos lo antes posible.",
         home_button: "Volver al inicio"
       },
       de: {
+        page_title: "Danke für deine Einsendung",
         thank_you_title: "Danke für deine Einsendung!",
         thank_you_message: "Wir haben deine Nachricht erhalten und werden dir bald antworten.",
         home_button: "Zurück zur Startseite"
+      },
+      it: {
+        page_title: "Grazie per la tua richiesta",
+        thank_you_title: "Grazie per la tua richiesta!",
+        thank_you_message: "Abbiamo ricevuto il tuo messaggio e ti risponderemo al più presto.",
+        home_button: "Torna alla home"
+      },
+      pt: {
+        page_title: "Obrigado pelo seu envio",
+        thank_you_title: "Obrigado pelo seu envio!",
+        thank_you_message: "Recebemos sua mensagem e responderemos em breve.",
+        home_button: "Voltar para o início"
       }
     };
 
@@ -97,15 +113,19 @@
         const key = el.getAttribute('data-i18n');
         if (dict[key]) el.textContent = dict[key];
       });
+
+      // Changer aussi le <title>
+      if (dict.page_title) {
+        document.title = dict.page_title;
+      }
     }
 
     window.addEventListener('DOMContentLoaded', () => {
       const savedLang = localStorage.getItem('lang') || 'fr';
       setLang(savedLang);
-      
-      // Ajoute un cache-buster au lien pour éviter la vieille version de la page
-      const link = document.getElementById('home-link');
-      link.href = `index.html?ts=${Date.now()}`; // Cache-busting : ajout de timestamp pour éviter le cache
+
+      // Pour forcer le rechargement de la page d'accueil sans cache (utile en dev)
+      document.getElementById('home-link').href = `index.html?ts=${Date.now()}`;
     });
   </script>
 </body>
