@@ -115,6 +115,13 @@
     
     </div>
     <script src="script.js"></script>
+    <script>
+      function setLang(lang) {
+  localStorage.setItem('lang', lang);
+  location.reload(); // ou recharge les textes si tu les charges dynamiquement
+}
+
+    </script>
     <footer>
       <!-- Ton footer ici -->
       <div class="footer-container">
